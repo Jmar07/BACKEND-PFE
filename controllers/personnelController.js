@@ -3,7 +3,7 @@ const db = require("../db")
 exports.personnel = (req,res)=>{
 
 
-    db.query({sql:"select DISTINCT designation from `?`"
+    db.query({sql:"select DISTINCT designation from ``"
 
     } , (err,results,fields)=>{
 

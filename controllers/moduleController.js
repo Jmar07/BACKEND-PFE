@@ -1,9 +1,9 @@
 const db = require("../db")
 
-exports.client = (req,res)=>{
+exports.module = (req,res)=>{
 
 
-    db.query({sql:"select DISTINCT des from `client_test`"
+    db.query({sql:"select DISTINCT designation from `Module`"
 
     } , (err,results,fields)=>{
 

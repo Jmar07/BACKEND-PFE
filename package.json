@@ -5,9 +5,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "cd ../FRONTEND-PFE && ng serve --open",
+    "client": "cd ../frontendPFE && ng serve --open",
     "start": "concurrently \"npm run server\" \"npm run client\""
-
   },
   "author": "",
   "license": "ISC",

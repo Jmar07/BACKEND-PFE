@@ -1,4 +1,6 @@
+const session = require("express-session");
 const db = require("../db")
+
 
 exports.login = (req,res)=>{
 
@@ -26,6 +28,9 @@ res.set('Access-Control-Allow-Origin', 'http://localhost:8000');
                     res.statusCode = 403;
                     res.send("password incorrect")
                 }else{
+                    
+                    req.session.username = username;
+
                     res.statusCode = 202
                     res.send("jawek behi")
                 }
@@ -37,5 +42,13 @@ res.set('Access-Control-Allow-Origin', 'http://localhost:8000');
    
     })
 
+
+}
+
+
+exports.logout = (req,res)=>{
+
+    req.session.destroy();
+    res.send("user is loging out")
 
 }

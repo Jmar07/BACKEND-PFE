@@ -9,7 +9,8 @@ const accompController = require("./controllers/accompController")
 
 
 router.post("/login",loginController.login);
-router.get("/login",loginController.login);
+router.post("/logout",loginController.logout);
+
 router.post("/client",clientController.client);
 router.get("/client",clientController.client);
 router.post("/module",moduleController.module);

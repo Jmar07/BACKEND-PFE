@@ -1,9 +1,15 @@
+const session = require("express-session");
 const db = require("../db")
 
 exports.client = (req,res)=>{
 
+    if(!req.session.username){
+        res.statusCode = 401;
+        res.send("me 3andekch l7a9")
 
-    db.query({sql:"select DISTINCT des from `client_test`"
+    }
+
+    else {db.query({sql:"select DISTINCT des from `client_test`"
 
     } , (err,results,fields)=>{
 
@@ -11,4 +17,6 @@ exports.client = (req,res)=>{
             res.send(results)
         }
     )
+    }
+
 }

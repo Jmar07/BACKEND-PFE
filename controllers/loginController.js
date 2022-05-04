@@ -4,7 +4,7 @@ const db = require("../db")
 
 exports.login = (req,res)=>{
 
-res.set('Access-Control-Allow-Origin', 'http://localhost:8000');
+res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
 
     const username = req.body.username;
     const password = req.body.password;

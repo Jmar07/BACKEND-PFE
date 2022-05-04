@@ -9,15 +9,6 @@ const { append } = require("express/lib/response");
 const app = express();
 
 
-var cors = require('cors')
-
-
-
-app.use(cors());
-
-
-
-
 router.post("/login",loginController.login);
 
 router.post("/client",clientController.client);
